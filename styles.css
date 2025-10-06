@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(-45deg, #1f1c2c, #928dab, #3a6073, #16222a);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: white;
+}
+
+/* Gradient animation */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+#display {
+  font-size: 3rem;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+#laps {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#laps li {
+  background: rgba(255,255,255,0.1);
+  margin: 5px;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+/* 🔘 Button styling */
+.buttons button {
+  margin: 10px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* smooth animation */
+}
+
+/* Start button */
+#start { background: #4CAF50; color: white; }
+#start:hover { 
+  transform: scale(1.1); 
+  box-shadow: 0 0 10px #4CAF50, 0 0 20px #4CAF50; 
+}
+
+/* Pause button */
+#pause { background: #ff9800; color: white; }
+#pause:hover { 
+  transform: scale(1.1); 
+  box-shadow: 0 0 10px #ff9800, 0 0 20px #ff9800; 
+}
+
+/* Reset button */
+#reset { background: #f44336; color: white; }
+#reset:hover { 
+  transform: scale(1.1); 
+  box-shadow: 0 0 10px #f44336, 0 0 20px #f44336; 
+}
+
+/* Lap button */
+#lap { background: #2196F3; color: white; }
+#lap:hover { 
+  transform: scale(1.1); 
+  box-shadow: 0 0 10px #2196F3, 0 0 20px #2196F3; 
+}
+
+/* Press (active) effect */
+.buttons button:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 5px rgba(0,0,0,0.5) inset;
+  transition: transform 0.05s; /* snappy press */
+}
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* behind stopwatch */
+}
+
